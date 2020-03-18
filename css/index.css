@@ -206,6 +206,9 @@ p {
   padding: 2%;
   text-shadow: 2px 2px 2px black;
 }
+.mainLeft section hr {
+  margin: 15% 0;
+}
 .mainLeft section h2 {
   padding: 2%;
   text-decoration: underline;
@@ -216,6 +219,8 @@ p {
 }
 .mainLeft section div {
   border-radius: 10px;
+  margin: 5% auto;
+  padding: 5% 0;
 }
 .mainLeft section div:hover {
   background-color: navy;
@@ -234,12 +239,24 @@ p {
   color: white;
   padding: 2%;
   margin: 2%;
-  height: 40vh;
   transition: 1s;
 }
 .mainRight section:hover {
   background-color: navy;
   box-shadow: inset 1px 1px 4px 4px black;
+}
+.mainRight section h2 {
+  font-size: 5rem;
+}
+.mainRight section h3 {
+  font-size: 2.5rem;
+}
+.mainRight section h4 {
+  font-size: 1.25rem;
+  padding: 1% 0;
+}
+.mainRight section p {
+  padding: 2% 0;
 }
 footer {
   background-color: dodgerblue;
