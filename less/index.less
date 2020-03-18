@@ -4,86 +4,167 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 ///////////////// MY CODE ///////////////////////
 // less-watch-compiler less css index.less
 // GENERAL //
 * {
-	box-sizing: border-box;
-	max-width: 100%;
-	border: 1px solid black;
+  box-sizing: border-box;
+  max-width: 100%;
+  border: 1px solid black;
 }
 
 html {
-	font-size: 62.5%;
-	font-size: 1rem;
+  font-size: 62.5%;
+  font-size: 1rem;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 h1 {
-	font-size: 4rem;
+  font-size: 4rem;
 }
 
 h2 {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 p {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 // VARIABLES
@@ -96,71 +177,77 @@ p {
 
 // MIXINS
 .flex() {
-	display: flex;
+  display: flex;
 }
 
 .column() {
-	.flex();
-	flex-direction: column;
-	align-items: center;
+  .flex();
+  flex-direction: column;
+  align-items: center;
 }
 
 .space-around() {
-	.flex();
-	justify-content: space-around;
+  .flex();
+  justify-content: space-around;
 }
-
 
 /////////////// CONTENT //////////////////
 
 .mainContainer {
-	.flex();
+  .flex();
 }
 
 // SIDE HEADER
 
 .mainLeft {
-	width: 30%;
-	background-color: @accentColor;
-	.headerContainer {
-		.column();
-		width: 100%;
-	} //closes header container
+  width: 30%;
+  background-color: @accentColor;
 
-	nav {
-		.space-around();
-		width: 100%;
-		a {
-			width: 30%;
-			padding: 3%;
-			text-align: center;
-			color: @leftTextColor;
-			font-size: 2rem;
-		}
-		
-	} //closes header nav
-	img {
-		width: 50%;
-		border: 3px solid whitesmoke;
-		border-radius: 50%;
-		margin: 3%;
-	} //closes header img
+  header {
+	.column();
+    width: 100%;
 
-	h1 {
-		color: @darkBGtextColor;
-		padding: 3%;
-	}//closes h1
-	p {
-		color: @darkBGtextColor;
-	}//closes p
+    nav {
+      .space-around();
+      width: 100%;
+      a {
+        width: 30%;
+        padding: 3%;
+        text-align: center;
+        color: @darkBGtextColor;
+        font-size: 2rem;
+      } //closes header links
+    } //closes header nav
+    img {
+      width: 50%;
+      border: 3px solid whitesmoke;
+      border-radius: 50%;
+      margin: 3%;
+    } //closes header img
+
+    h1 {
+      color: @darkBGtextColor;
+      padding: 3%;
+    } //closes h1
+    p {
+      color: @darkBGtextColor;
+    } //closes p
+  } //closes header
 } //closes mainLeft
 
 .mainRight {
-	width: 80%;
-	background-color: @mainColor;
+  width: 80%;
+  background-color: @mainColor;
+  padding:1%;
+  
+  section {
+	  margin: 3% auto;
+  }
 }
 
 footer {
-	background-color: darkblue;
-	color:
+  background-color: darkblue;
+  color: @darkBGtextColor;
+  padding: 1%;
+  text-align: center;
 }

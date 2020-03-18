@@ -86,7 +86,6 @@ video {
   margin: 0;
   padding: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -118,7 +117,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -161,38 +160,48 @@ p {
   width: 30%;
   background-color: dodgerblue;
 }
-.mainLeft .headerContainer {
+.mainLeft header {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-.mainLeft nav {
+.mainLeft header nav {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
-.mainLeft nav a {
+.mainLeft header nav a {
   width: 30%;
   padding: 3%;
   text-align: center;
   color: white;
   font-size: 2rem;
 }
-.mainLeft img {
+.mainLeft header img {
   width: 50%;
   border: 3px solid whitesmoke;
   border-radius: 50%;
   margin: 3%;
 }
-.mainLeft h1 {
+.mainLeft header h1 {
   color: white;
   padding: 3%;
+}
+.mainLeft header p {
+  color: white;
 }
 .mainRight {
   width: 80%;
   background-color: lightblue;
+  padding: 1%;
+}
+.mainRight section {
+  margin: 3% auto;
 }
 footer {
   background-color: darkblue;
+  color: white;
+  padding: 1%;
+  text-align: center;
 }
