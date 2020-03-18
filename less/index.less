@@ -19,7 +19,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -57,9 +56,111 @@ html, body {
     height: 100%;
 }
 
-// MY CODE
-
+///////////////// MY CODE ///////////////////////
+// less-watch-compiler less css index.less
+// GENERAL //
 * {
 	box-sizing: border-box;
 	max-width: 100%;
+	border: 1px solid black;
+}
+
+html {
+	font-size: 62.5%;
+	font-size: 1rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+p {
+	font-size: 1.5rem;
+}
+
+// VARIABLES
+
+@mainColor: lightblue;
+
+@accentColor: dodgerblue;
+
+@darkBGtextColor: white;
+
+// MIXINS
+.flex() {
+	display: flex;
+}
+
+.column() {
+	.flex();
+	flex-direction: column;
+	align-items: center;
+}
+
+.space-around() {
+	.flex();
+	justify-content: space-around;
+}
+
+
+/////////////// CONTENT //////////////////
+
+.mainContainer {
+	.flex();
+}
+
+// SIDE HEADER
+
+.mainLeft {
+	width: 30%;
+	background-color: @accentColor;
+	.headerContainer {
+		.column();
+		width: 100%;
+	} //closes header container
+
+	nav {
+		.space-around();
+		width: 100%;
+		a {
+			width: 30%;
+			padding: 3%;
+			text-align: center;
+			color: @leftTextColor;
+			font-size: 2rem;
+		}
+		
+	} //closes header nav
+	img {
+		width: 50%;
+		border: 3px solid whitesmoke;
+		border-radius: 50%;
+		margin: 3%;
+	} //closes header img
+
+	h1 {
+		color: @darkBGtextColor;
+		padding: 3%;
+	}//closes h1
+	p {
+		color: @darkBGtextColor;
+	}//closes p
+} //closes mainLeft
+
+.mainRight {
+	width: 80%;
+	background-color: @mainColor;
+}
+
+footer {
+	background-color: darkblue;
+	color:
 }
