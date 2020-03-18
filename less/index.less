@@ -202,10 +202,13 @@ p {
 .mainLeft {
   width: 30%;
   background-color: @accentColor;
+  color: @darkBGtextColor;
 
   header {
 	.column();
-    width: 100%;
+	width: 100%;
+	padding-bottom: 2%;
+	border-bottom: 2px solid @darkBGtextColor;
 
     nav {
       .space-around();
@@ -226,13 +229,14 @@ p {
     } //closes header img
 
     h1 {
-      color: @darkBGtextColor;
       padding: 3%;
     } //closes h1
-    p {
-      color: @darkBGtextColor;
-    } //closes p
+    
   } //closes header
+
+  section {
+	  
+  }
 } //closes mainLeft
 
 .mainRight {
@@ -250,4 +254,8 @@ footer {
   color: @darkBGtextColor;
   padding: 1%;
   text-align: center;
+
+  p {
+	  font-size: 1rem;
+  }
 }

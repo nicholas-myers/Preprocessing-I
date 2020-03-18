@@ -159,12 +159,15 @@ p {
 .mainLeft {
   width: 30%;
   background-color: dodgerblue;
+  color: white;
 }
 .mainLeft header {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding-bottom: 2%;
+  border-bottom: 2px solid white;
 }
 .mainLeft header nav {
   display: flex;
@@ -185,11 +188,7 @@ p {
   margin: 3%;
 }
 .mainLeft header h1 {
-  color: white;
   padding: 3%;
-}
-.mainLeft header p {
-  color: white;
 }
 .mainRight {
   width: 80%;
@@ -204,4 +203,7 @@ footer {
   color: white;
   padding: 1%;
   text-align: center;
+}
+footer p {
+  font-size: 1rem;
 }
