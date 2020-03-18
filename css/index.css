@@ -158,11 +158,11 @@ p {
 }
 .mainLeft {
   width: 30%;
-  background-color: dodgerblue;
-  color: white;
   margin: 1%;
   border-radius: 20px;
   box-shadow: 5px 5px 5px black;
+  background-color: dodgerblue;
+  color: white;
 }
 .mainLeft header {
   display: flex;
@@ -183,6 +183,14 @@ p {
   text-align: center;
   color: white;
   font-size: 2rem;
+  border-radius: 20px;
+  text-shadow: 2px 2px 2px black;
+  transition: 1s;
+}
+.mainLeft header nav a:hover {
+  background-color: navy;
+  border-radius: 20px;
+  text-shadow: 2px 2px 3px yellow;
 }
 .mainLeft header img {
   width: 50%;
@@ -212,14 +220,21 @@ p {
 }
 .mainRight section {
   margin: 3% auto;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px black;
+  background-color: dodgerblue;
+  color: white;
+  padding: 2%;
+  margin: 3%;
+  height: 40vh;
 }
 footer {
-  background-color: darkblue;
+  background-color: dodgerblue;
   color: white;
   padding: 0.5%;
   text-align: center;
   box-shadow: inset 0px 3px 6px 0px black;
 }
 footer p {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }

@@ -193,6 +193,13 @@ p {
   justify-content: space-around;
 }
 
+.shadowBox() {
+	border-radius: 20px;
+  box-shadow: 5px 5px 5px black;
+  background-color: @accentColor;
+  color: @darkBGtextColor;
+}
+
 /////////////// CONTENT //////////////////
 
 .mainContainer {
@@ -204,11 +211,9 @@ p {
 
 .mainLeft {
   width: 30%;
-  background-color: @accentColor;
-  color: @darkBGtextColor;
   margin: 1%;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px black;
+  .shadowBox();
+  
 
   header {
 	.column();
@@ -224,7 +229,15 @@ p {
         padding: 3%;
         text-align: center;
         color: @darkBGtextColor;
-        font-size: 2rem;
+		font-size: 2rem;
+		border-radius: 20px;
+		text-shadow: @textshadow;
+		transition: 1s;
+		&:hover {
+			background-color: navy;
+			border-radius: 20px;
+			text-shadow: 2px 2px 3px yellow;
+		}
       } //closes header links
     } //closes header nav
     img {
@@ -248,11 +261,11 @@ p {
 		  padding: 2%;
 		  text-decoration: underline;
 		  text-shadow: @textshadow;
-	  }
+	  } //closes section h2
 
 	  p {
 		  padding: 2%;
-	  }
+	  } //closes section p
   }
 } //closes mainLeft
 
@@ -263,17 +276,21 @@ p {
   
   section {
 	  margin: 3% auto;
-  }
-}
+	  .shadowBox();
+	  padding: 2%;
+	  margin: 3%;
+	  height: 40vh;
+  }// closes section mainright
+} //closes main right
 
 footer {
-  background-color: darkblue;
+  background-color: @accentColor;
   color: @darkBGtextColor;
   padding: 0.5%;
   text-align: center;
   box-shadow: inset 0px 3px 6px 0px black;
 
   p {
-	  font-size: 1rem;
-  }
-}
+	  font-size: 1.5rem;
+  } //closes footer p
+} //closes footer
