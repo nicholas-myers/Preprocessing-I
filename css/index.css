@@ -206,9 +206,6 @@ p {
   padding: 2%;
   text-shadow: 2px 2px 2px black;
 }
-.mainLeft section hr {
-  margin: 15% 0;
-}
 .mainLeft section h2 {
   padding: 2%;
   text-decoration: underline;
@@ -219,8 +216,7 @@ p {
 }
 .mainLeft section div {
   border-radius: 10px;
-  margin: 5% auto;
-  padding: 5% 0;
+  margin: 15% auto;
 }
 .mainLeft section div:hover {
   background-color: navy;
