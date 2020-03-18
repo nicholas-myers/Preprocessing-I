@@ -175,6 +175,8 @@ p {
 
 @darkBGtextColor: white;
 
+@textshadow: 2px 2px 2px black;
+
 // MIXINS
 .flex() {
   display: flex;
@@ -240,10 +242,12 @@ p {
 
   section {
 	  padding: 2%;
+	  text-shadow: @textshadow;
 
 	  h2 {
 		  padding: 2%;
 		  text-decoration: underline;
+		  text-shadow: @textshadow;
 	  }
 
 	  p {
@@ -267,7 +271,7 @@ footer {
   color: @darkBGtextColor;
   padding: 0.5%;
   text-align: center;
-
+  box-shadow: inset 0px 3px 6px 0px black;
 
   p {
 	  font-size: 1rem;

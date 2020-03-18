@@ -195,10 +195,12 @@ p {
 }
 .mainLeft section {
   padding: 2%;
+  text-shadow: 2px 2px 2px black;
 }
 .mainLeft section h2 {
   padding: 2%;
   text-decoration: underline;
+  text-shadow: 2px 2px 2px black;
 }
 .mainLeft section p {
   padding: 2%;
@@ -216,6 +218,7 @@ footer {
   color: white;
   padding: 0.5%;
   text-align: center;
+  box-shadow: inset 0px 3px 6px 0px black;
 }
 footer p {
   font-size: 1rem;
