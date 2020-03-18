@@ -266,21 +266,34 @@ p {
 	  p {
 		  padding: 2%;
 	  } //closes section p
+
+	  div {
+		border-radius: 10px;
+		&:hover {
+			background-color: navy;
+			border-radius: 10px;
+			transition: 1s;
+		}//closes div hover
+		
+	  }//closes div
+	  
   }
 } //closes mainLeft
 
 .mainRight {
   width: 80%;
   background-color: @mainColor;
-  padding:1%;
   
   section {
-	  margin: 3% auto;
 	  .shadowBox();
 	  padding: 2%;
-	  margin: 3%;
+	  margin: 2%;
 	  height: 40vh;
-  }// closes section mainright
+	  transition: 1s;
+	  &:hover {
+		  background-color: navy;
+	  }
+  }// closes mainright section
 } //closes main right
 
 footer {

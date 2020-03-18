@@ -213,20 +213,30 @@ p {
 .mainLeft section p {
   padding: 2%;
 }
+.mainLeft section div {
+  border-radius: 10px;
+}
+.mainLeft section div:hover {
+  background-color: navy;
+  border-radius: 10px;
+  transition: 1s;
+}
 .mainRight {
   width: 80%;
   background-color: lightblue;
-  padding: 1%;
 }
 .mainRight section {
-  margin: 3% auto;
   border-radius: 20px;
   box-shadow: 5px 5px 5px black;
   background-color: dodgerblue;
   color: white;
   padding: 2%;
-  margin: 3%;
+  margin: 2%;
   height: 40vh;
+  transition: 1s;
+}
+.mainRight section:hover {
+  background-color: navy;
 }
 footer {
   background-color: dodgerblue;
