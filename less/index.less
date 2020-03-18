@@ -140,7 +140,7 @@ body {
 ///////////////// MY CODE ///////////////////////
 // less-watch-compiler less css index.less
 // GENERAL //
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Acme|Anton|Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Acme|Anton|Varela+Round&display=swap");
 
 * {
   box-sizing: border-box;
@@ -174,10 +174,10 @@ p {
 
 // VARIABLES
 
-@anton: 'Anton', sans-serif;
-@varela: 'Varela Round', sans-serif;
-@acme: 'Acme', sans-serif;
-@abril: 'Abril Fatface', cursive;
+@anton: "Anton", sans-serif;
+@varela: "Varela Round", sans-serif;
+@acme: "Acme", sans-serif;
+@abril: "Abril Fatface", cursive;
 
 @mainColor: lightblue;
 @accentColor: dodgerblue;
@@ -212,111 +212,115 @@ p {
 .mainContainer {
   .flex();
   background-color: @mainColor;
-}
 
-// SIDE HEADER
+  // SIDE HEADER
 
-.mainLeft {
-  width: 30%;
-  margin: 1%;
-  .shadowBox();
+  .mainLeft {
+    width: 30%;
+    margin: 1%;
+    .shadowBox();
 
-  header {
-    .column();
-    width: 100%;
-    padding-bottom: 2%;
-	border-bottom: 2px solid @darkBGtextColor;
-
-    nav {
-      .space-around();
+    header {
+      .column();
       width: 100%;
-      a {
-        width: 25%;
+      padding-bottom: 2%;
+      border-bottom: 2px solid @darkBGtextColor;
+
+      nav {
+        .space-around();
+        width: 100%;
+        a {
+          width: 25%;
+          padding: 3%;
+          text-align: center;
+          color: @darkBGtextColor;
+          font-size: 2rem;
+          border-radius: 20px;
+          text-shadow: @textshadow;
+          transition: 1s;
+          &:hover {
+            background-color: navy;
+            border-radius: 20px;
+            text-shadow: 2px 2px 3px yellow;
+            box-shadow: inset 1px 1px 4px 4px black;
+          } //closes hover
+        } //closes header links
+      } //closes header nav
+      img {
+        width: 50%;
+        border: 3px solid whitesmoke;
+        border-radius: 50%;
+        margin: 3%;
+      } //closes header img
+
+      h1 {
         padding: 3%;
-        text-align: center;
-        color: @darkBGtextColor;
-        font-size: 2rem;
-        border-radius: 20px;
+      } //closes h1
+    } //closes header
+
+    section {
+	  padding: 2%;
+	  margin: 5% 0;
+      text-shadow: @textshadow;
+
+      h2 {
+        padding: 2%;
+        text-decoration: underline;
         text-shadow: @textshadow;
-        transition: 1s;
+      } //closes section h2
+
+      p {
+        padding: 2%;
+      } //closes section p
+
+      div {
+        border-radius: 10px;
+        margin: 15% auto;
         &:hover {
           background-color: navy;
-          border-radius: 20px;
-          text-shadow: 2px 2px 3px yellow;
-          box-shadow: inset 1px 1px 4px 4px black;
-        } //closes hover
-      } //closes header links
-    } //closes header nav
-    img {
-      width: 50%;
-      border: 3px solid whitesmoke;
-      border-radius: 50%;
-      margin: 3%;
-    } //closes header img
+          border-radius: 10px;
+          transition: 1s;
+          box-shadow: inset 0.5px 0.5px 2px 2px white;
+        } //closes div hover
+      } //closes div
+    }
+  } //closes mainLeft
 
-    h1 {
-      padding: 3%;
-    } //closes h1
-  } //closes header
-
-  section {
-    padding: 2%;
+  .mainRight {
+    width: 80%;
+    background-color: @mainColor;
 	text-shadow: @textshadow;
+	.column();
+	justify-content: space-between;
 
-    h2 {
-      padding: 2%;
-      text-decoration: underline;
-      text-shadow: @textshadow;
-    } //closes section h2
-
-    p {
-      padding: 2%;
-    } //closes section p
-
-    div {
-	  border-radius: 10px;
-	  margin: 15% auto;
+    section {
+	  .shadowBox();
+	  width: 90%;
+      padding: 5%;
+      margin: 2%;
+      transition: 1s;
       &:hover {
         background-color: navy;
-        border-radius: 10px;
-        transition: 1s;
-        box-shadow: inset 0.5px 0.5px 2px 2px white;
-      } //closes div hover
-    } //closes div
-  }
-} //closes mainLeft
+        box-shadow: inset 1px 1px 4px 4px black;
+      } //closes hover
 
-.mainRight {
-  width: 80%;
-  background-color: @mainColor;
-  text-shadow: @textshadow;
+      h2 {
+        font-size: 5rem;
+      } //closes h2
 
-  section {
-    .shadowBox();
-    padding: 5%;
-    margin: 2%;
-    transition: 1s;
-    &:hover {
-      background-color: navy;
-      box-shadow: inset 1px 1px 4px 4px black;
-    } //closes hover
-
-    h2 {
-      font-size: 5rem;
-    } //closes h2
-
-    h3 {
-      font-size: 2.5rem;
-    } //closes h3
-    h4 {
-	  font-size: 1.5rem;
-	  padding: 1% 0;
-    } //closes h4
-    p {
-	  font-size: 1.25rem;
-    } //closes p
-  } // closes mainright section
-} //closes main right
+      h3 {
+        font-size: 2.5rem;
+      } //closes h3
+      h4 {
+        font-size: 1.5rem;
+        padding: 1% 0;
+      } //closes h4
+      p {
+        font-size: 1.25rem;
+      } //closes p
+    } // closes mainright section
+  } //closes main right
+} //closes the maincontainer
 
 footer {
   background-color: @accentColor;
