@@ -143,7 +143,7 @@ body {
 * {
   box-sizing: border-box;
   max-width: 100%;
-  border: 1px solid black;
+//   border: 1px solid black;
 }
 
 html {
@@ -195,6 +195,7 @@ p {
 
 .mainContainer {
   .flex();
+  background-color: @mainColor;
 }
 
 // SIDE HEADER
@@ -203,6 +204,9 @@ p {
   width: 30%;
   background-color: @accentColor;
   color: @darkBGtextColor;
+  margin: 1%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px black;
 
   header {
 	.column();
@@ -214,7 +218,7 @@ p {
       .space-around();
       width: 100%;
       a {
-        width: 30%;
+        width: 25%;
         padding: 3%;
         text-align: center;
         color: @darkBGtextColor;
@@ -235,7 +239,16 @@ p {
   } //closes header
 
   section {
-	  
+	  padding: 2%;
+
+	  h2 {
+		  padding: 2%;
+		  text-decoration: underline;
+	  }
+
+	  p {
+		  padding: 2%;
+	  }
   }
 } //closes mainLeft
 
@@ -252,8 +265,9 @@ p {
 footer {
   background-color: darkblue;
   color: @darkBGtextColor;
-  padding: 1%;
+  padding: 0.5%;
   text-align: center;
+
 
   p {
 	  font-size: 1rem;

@@ -135,7 +135,6 @@ body {
 * {
   box-sizing: border-box;
   max-width: 100%;
-  border: 1px solid black;
 }
 html {
   font-size: 62.5%;
@@ -155,11 +154,15 @@ p {
 }
 .mainContainer {
   display: flex;
+  background-color: lightblue;
 }
 .mainLeft {
   width: 30%;
   background-color: dodgerblue;
   color: white;
+  margin: 1%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px black;
 }
 .mainLeft header {
   display: flex;
@@ -175,7 +178,7 @@ p {
   width: 100%;
 }
 .mainLeft header nav a {
-  width: 30%;
+  width: 25%;
   padding: 3%;
   text-align: center;
   color: white;
@@ -190,6 +193,16 @@ p {
 .mainLeft header h1 {
   padding: 3%;
 }
+.mainLeft section {
+  padding: 2%;
+}
+.mainLeft section h2 {
+  padding: 2%;
+  text-decoration: underline;
+}
+.mainLeft section p {
+  padding: 2%;
+}
 .mainRight {
   width: 80%;
   background-color: lightblue;
@@ -201,7 +214,7 @@ p {
 footer {
   background-color: darkblue;
   color: white;
-  padding: 1%;
+  padding: 0.5%;
   text-align: center;
 }
 footer p {
