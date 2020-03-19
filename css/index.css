@@ -168,6 +168,10 @@ html {
   font-size: 62.5%;
   font-size: 1rem;
 }
+body {
+  width: 100%;
+  margin: 0;
+}
 a {
   text-decoration: none;
 }
@@ -183,17 +187,33 @@ p {
   font-size: 1.5rem;
   font-family: "Varela Round", sans-serif;
 }
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
 .mainContainer {
   display: flex;
   background-color: lightblue;
 }
+@media (max-width: 500px) {
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .mainContainer .mainLeft {
   width: 30%;
-  margin: 1%;
+  margin: 1.2%;
   border-radius: 20px;
   box-shadow: 5px 5px 5px black;
   background-color: dodgerblue;
   color: white;
+}
+@media (max-width: 500px) {
+  .mainContainer .mainLeft {
+    width: 90%;
+  }
 }
 .mainContainer .mainLeft header {
   display: flex;
@@ -202,6 +222,11 @@ p {
   width: 100%;
   padding-bottom: 2%;
   border-bottom: 2px solid white;
+}
+@media (max-width: 500px) {
+  .mainContainer .mainLeft header {
+    text-align: center;
+  }
 }
 .mainContainer .mainLeft header nav {
   display: flex;
@@ -223,6 +248,11 @@ p {
   border-radius: 20px;
   text-shadow: 2px 2px 3px yellow;
   box-shadow: inset 1px 1px 4px 4px black;
+}
+@media (max-width: 500px) {
+  .mainContainer .mainLeft header nav a {
+    font-size: 1.5rem;
+  }
 }
 .mainContainer .mainLeft header img {
   width: 50%;
@@ -246,9 +276,15 @@ p {
 .mainContainer .mainLeft section p {
   padding: 2%;
 }
+@media (max-width: 500px) {
+  .mainContainer .mainLeft section p {
+    font-size: 1.3rem;
+  }
+}
 .mainContainer .mainLeft section div {
   border-radius: 10px;
   margin: 15% auto;
+  word-wrap: break-word;
 }
 .mainContainer .mainLeft section div:hover {
   background-color: navy;
@@ -281,6 +317,11 @@ p {
 }
 .mainContainer .mainRight section h2 {
   font-size: 5rem;
+}
+@media (max-width: 500px) {
+  .mainContainer .mainRight section h2 {
+    font-size: 3rem;
+  }
 }
 .mainContainer .mainRight section h3 {
   font-size: 2.5rem;

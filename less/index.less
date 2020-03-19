@@ -153,6 +153,11 @@ html {
   font-size: 1rem;
 }
 
+body {
+	width: 100%;
+	margin: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -165,6 +170,7 @@ h1 {
 h2 {
   font-size: 1.5rem;
   font-family: @acme;
+  
 }
 
 p {
@@ -187,6 +193,11 @@ p {
 // MIXINS
 .flex() {
   display: flex;
+}
+
+.wrap {
+  .flex();
+  flex-wrap: wrap;
 }
 
 .column() {
@@ -212,22 +223,31 @@ p {
 .mainContainer {
   .flex();
   background-color: @mainColor;
+  @media (max-width: 500px) {
+	  .column();
+  } //closes 500px media query
 
   // SIDE HEADER
 
   .mainLeft {
     width: 30%;
-    margin: 1%;
-    .shadowBox();
+    margin: 1.2%;
+	.shadowBox();
+	@media (max-width: 500px) {
+		width: 90%;
+	} //closes 500px media query
 
     header {
       .column();
       width: 100%;
       padding-bottom: 2%;
-      border-bottom: 2px solid @darkBGtextColor;
+	  border-bottom: 2px solid @darkBGtextColor;
+	  @media (max-width: 500px) {
+		text-align: center;
+	} //closes 500px media query
 
       nav {
-        .space-around();
+		.space-around();
         width: 100%;
         a {
           width: 25%;
@@ -237,13 +257,16 @@ p {
           font-size: 2rem;
           border-radius: 20px;
           text-shadow: @textshadow;
-          transition: 1s;
+		  transition: 1s;
           &:hover {
             background-color: navy;
             border-radius: 20px;
             text-shadow: 2px 2px 3px yellow;
             box-shadow: inset 1px 1px 4px 4px black;
-          } //closes hover
+		  } //closes hover
+		  @media (max-width: 500px) {
+			font-size: 1.5rem;
+		} //closes 500px media query
         } //closes header links
       } //closes header nav
       img {
@@ -259,8 +282,8 @@ p {
     } //closes header
 
     section {
-	  padding: 2%;
-	  margin: 5% 0;
+      padding: 2%;
+      margin: 5% 0;
       text-shadow: @textshadow;
 
       h2 {
@@ -270,18 +293,22 @@ p {
       } //closes section h2
 
       p {
-        padding: 2%;
+		padding: 2%;
+		@media (max-width: 500px) {
+			font-size: 1.3rem;
+		} //closes 500px media query
       } //closes section p
 
       div {
         border-radius: 10px;
-        margin: 15% auto;
+		margin: 15% auto;
+		word-wrap: break-word;
         &:hover {
           background-color: navy;
           border-radius: 10px;
           transition: 1s;
-          box-shadow: inset 0.5px 0.5px 2px 2px white;
-        } //closes div hover
+		  box-shadow: inset 0.5px 0.5px 2px 2px white;
+		} //closes div hover
       } //closes div
     }
   } //closes mainLeft
@@ -289,13 +316,14 @@ p {
   .mainRight {
     width: 80%;
     background-color: @mainColor;
-	text-shadow: @textshadow;
-	.column();
+    text-shadow: @textshadow;
+    .column();
 	justify-content: space-between;
+	
 
     section {
-	  .shadowBox();
-	  width: 90%;
+      .shadowBox();
+      width: 90%;
       padding: 5%;
       margin: 2%;
       transition: 1s;
@@ -305,7 +333,10 @@ p {
       } //closes hover
 
       h2 {
-        font-size: 5rem;
+		font-size: 5rem;
+		@media (max-width: 500px) {
+			font-size: 3rem;
+		} //closes 500px media query
       } //closes h2
 
       h3 {
@@ -328,6 +359,7 @@ footer {
   padding: 0.5%;
   text-align: center;
   box-shadow: inset 0px 3px 6px 0px black;
+  
 
   p {
     font-size: 1.5rem;
