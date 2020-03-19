@@ -319,6 +319,9 @@ p {
     text-shadow: @textshadow;
     .column();
 	justify-content: space-between;
+	@media (max-width: 500px) {
+		width: 95%;
+	} //closes 500px media query
 	
 
     section {
@@ -326,11 +329,19 @@ p {
       width: 90%;
       padding: 5%;
       margin: 2%;
-      transition: 1s;
+	  transition: 1s;
+	  a {
+		  color: gold;
+		  text-decoration: underline;
+	  }
       &:hover {
         background-color: navy;
         box-shadow: inset 1px 1px 4px 4px black;
-      } //closes hover
+	  } //closes hover
+	  img {
+		  border: 1px solid white;
+		  background-color: black;
+	  }
 
       h2 {
 		font-size: 5rem;
@@ -359,9 +370,14 @@ footer {
   padding: 0.5%;
   text-align: center;
   box-shadow: inset 0px 3px 6px 0px black;
-  
+  @media (max-width: 500px) {
+	padding: 2%;
+} //closes 500px media query
 
   p {
-    font-size: 1.5rem;
+	font-size: 1.5rem;
+	@media (max-width: 500px) {
+		font-size: 1rem;
+	} //closes 500px media query
   } //closes footer p
 } //closes footer
