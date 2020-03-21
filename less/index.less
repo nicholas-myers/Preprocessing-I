@@ -4,56 +4,380 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
+///////////////// MY CODE ///////////////////////
+// less-watch-compiler less css index.less
+// GENERAL //
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Acme|Anton|Varela+Round&display=swap");
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  //   border: 1px solid black;
+}
+
+html {
+  font-size: 62.5%;
+  font-size: 1rem;
+}
+
+body {
+	width: 100%;
+	margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: @abril;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-family: @acme;
+  
+}
+
+p {
+  font-size: 1.5rem;
+  font-family: @varela;
+}
+
+// VARIABLES
+
+@anton: "Anton", sans-serif;
+@varela: "Varela Round", sans-serif;
+@acme: "Acme", sans-serif;
+@abril: "Abril Fatface", cursive;
+
+@mainColor: lightblue;
+@accentColor: dodgerblue;
+@darkBGtextColor: white;
+@textshadow: 2px 2px 2px black;
+
+// MIXINS
+.flex() {
+  display: flex;
+}
+
+.wrap {
+  .flex();
+  flex-wrap: wrap;
+}
+
+.column() {
+  .flex();
+  flex-direction: column;
+  align-items: center;
+}
+
+.space-around() {
+  .flex();
+  justify-content: space-around;
+}
+
+.shadowBox() {
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px black;
+  background-color: @accentColor;
+  color: @darkBGtextColor;
+}
+
+/////////////// CONTENT //////////////////
+
+.mainContainer {
+  .flex();
+  background-color: @mainColor;
+  @media (max-width: 500px) {
+	  .column();
+  } //closes 500px media query
+
+  // SIDE HEADER
+
+  .mainLeft {
+    width: 30%;
+    margin: 1.2%;
+	.shadowBox();
+	@media (max-width: 500px) {
+		width: 90%;
+	} //closes 500px media query
+
+    header {
+      .column();
+      width: 100%;
+      padding-bottom: 2%;
+	  border-bottom: 2px solid @darkBGtextColor;
+	  @media (max-width: 500px) {
+		text-align: center;
+	} //closes 500px media query
+
+      nav {
+		.space-around();
+        width: 100%;
+        a {
+          width: 25%;
+          padding: 3%;
+          text-align: center;
+          color: @darkBGtextColor;
+          font-size: 2rem;
+          border-radius: 20px;
+          text-shadow: @textshadow;
+		  transition: 1s;
+          &:hover {
+            background-color: navy;
+            border-radius: 20px;
+            text-shadow: 2px 2px 3px yellow;
+            box-shadow: inset 1px 1px 4px 4px black;
+		  } //closes hover
+		  @media (max-width: 500px) {
+			font-size: 1.5rem;
+		} //closes 500px media query
+        } //closes header links
+      } //closes header nav
+      img {
+        width: 50%;
+        border: 3px solid whitesmoke;
+        border-radius: 50%;
+        margin: 3%;
+      } //closes header img
+
+      h1 {
+        padding: 3%;
+      } //closes h1
+    } //closes header
+
+    section {
+      padding: 2%;
+      margin: 5% 0;
+      text-shadow: @textshadow;
+
+      h2 {
+        padding: 2%;
+        text-decoration: underline;
+        text-shadow: @textshadow;
+      } //closes section h2
+
+      p {
+		padding: 2%;
+		@media (max-width: 500px) {
+			font-size: 1.3rem;
+		} //closes 500px media query
+      } //closes section p
+
+      div {
+        border-radius: 10px;
+		margin: 18% auto;
+		word-wrap: break-word;
+        &:hover {
+          background-color: navy;
+          border-radius: 10px;
+          transition: 1s;
+		  box-shadow: inset 0.5px 0.5px 2px 2px white;
+		} //closes div hover
+      } //closes div
+    }
+  } //closes mainLeft
+
+  .mainRight {
+    width: 80%;
+    background-color: @mainColor;
+    text-shadow: @textshadow;
+    .column();
+	justify-content: space-between;
+	@media (max-width: 500px) {
+		width: 95%;
+	} //closes 500px media query
+	
+
+    section {
+      .shadowBox();
+      width: 90%;
+      padding: 5%;
+      margin: 2%;
+	  transition: 1s;
+	  a {
+		  color: gold;
+		  text-decoration: underline;
+	  }
+      &:hover {
+        background-color: navy;
+        box-shadow: inset 1px 1px 4px 4px black;
+	  } //closes hover
+	  img {
+		  border: 1px solid white;
+		  background-color: black;
+	  }
+
+      h2 {
+		font-size: 5rem;
+		@media (max-width: 500px) {
+			font-size: 3rem;
+		} //closes 500px media query
+      } //closes h2
+
+      h3 {
+        font-size: 2.5rem;
+      } //closes h3
+      h4 {
+        font-size: 1.5rem;
+        padding: 1% 0;
+      } //closes h4
+      p {
+        font-size: 1.25rem;
+      } //closes p
+    } // closes mainright section
+  } //closes main right
+} //closes the maincontainer
+
+footer {
+  background-color: @accentColor;
+  color: @darkBGtextColor;
+  padding: 0.5%;
+  text-align: center;
+  box-shadow: inset 0px 3px 6px 0px black;
+  @media (max-width: 500px) {
+	padding: 2%;
+} //closes 500px media query
+
+  p {
+	font-size: 1.5rem;
+	@media (max-width: 500px) {
+		font-size: 1rem;
+	} //closes 500px media query
+  } //closes footer p
+} //closes footer
